@@ -16,8 +16,7 @@ public class Calculadora {
             return this.a * this.b;
         } else{
             return this.a / this.b;
-        }
-            
+        }   
     }
 }
 

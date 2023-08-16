@@ -1,4 +1,4 @@
-package revisao;
+package Lista_1;
 
 public class VerificaNumeroPrimo {
 
@@ -15,7 +15,7 @@ public class VerificaNumeroPrimo {
 
     public static void main(String[] args) {
         VerificaNumeroPrimo verifica = new VerificaNumeroPrimo();
-        verifica.n = 20; // O número que você deseja verificar
+        verifica.n = 38; // O número que você deseja verificar
         Integer resultado = verifica.verificaNumero();
         System.out.println(resultado);
     }
