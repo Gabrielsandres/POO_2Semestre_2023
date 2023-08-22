@@ -15,7 +15,7 @@ public class VerificaNumeroPrimo {
 
     public static void main(String[] args) {
         VerificaNumeroPrimo verifica = new VerificaNumeroPrimo();
-        verifica.n = 38; // O número que você deseja verificar
+        verifica.n = 7; // O número que você deseja verificar
         Integer resultado = verifica.verificaNumero();
         System.out.println(resultado);
     }
