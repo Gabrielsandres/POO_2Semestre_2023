@@ -1,4 +1,4 @@
-package Lista_1.atividade2;
+package Lista_1;
 import java.util.Scanner;
 import java.text.DecimalFormat;
 
