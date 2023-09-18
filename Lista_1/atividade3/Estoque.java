@@ -1,4 +1,4 @@
-
+package Lista_1.atividade3;
 
 /*Crie um sistema simples de gerenciamento de estoque usando objetos e classes. Cada objeto do estoque deve ter nome e quantidade.
 O sistema deve permitir ao usuário adicionar, remover, listar e atualizar a quantidade de objetos cadastrados.*/
