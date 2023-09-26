@@ -2,6 +2,7 @@ package Lista_2.Atividade_6;
 
 
 public class Sobrado extends Moradia {
+    
     private int numAndares;
     private boolean temPiscina;
 
@@ -21,7 +22,7 @@ public class Sobrado extends Moradia {
 
     @Override
     public void descricao() {
-        String possuiJardim = temPiscina ? "com piscina" : "sem piscina";
+        String possuiPiscina = temPiscina ? "com piscina" : "sem piscina";
         System.out.println("\nEste é um sobrado localizado em " + getEndereco() + " com " + getNumeroQuartos() + " quartos, " + numAndares + " andares e " + possuiJardim + ".");
     }
 }
