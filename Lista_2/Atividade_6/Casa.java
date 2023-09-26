@@ -15,7 +15,7 @@ public class Casa extends Moradia {
     @Override
     public void descricao() {
         String possuiJardim = jardim ? "com jardim" : "sem jardim";
-        System.out.println("Esta é uma casa localizada em " + getEndereco() + " com " + getNumeroQuartos() + " quartos e " + possuiJardim + ".");
+        System.out.println("\nEsta é uma casa localizada em " + getEndereco() + " com " + getNumeroQuartos() + " quartos e " + possuiJardim + ".");
     }
 }
 

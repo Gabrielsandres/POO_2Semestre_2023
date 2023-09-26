@@ -14,7 +14,7 @@ public class Apartamento extends Moradia {
 
     @Override
     public void descricao() {
-        System.out.println("Este é um apartamento localizado em " + getEndereco() + " no " + andar + "º andar, com " + getNumeroQuartos() + " quartos.");
+        System.out.println("\nEste é um apartamento localizado em " + getEndereco() + " no " + andar + "º andar, com " + getNumeroQuartos() + " quartos.");
     }
 }
 

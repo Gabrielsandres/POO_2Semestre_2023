@@ -18,7 +18,7 @@ public class Moradia {
     }
 
     public void descricao() {
-        System.out.println("Esta é uma moradia.");
+        System.out.println("\nEsta é uma moradia.");
     }
 }
 
