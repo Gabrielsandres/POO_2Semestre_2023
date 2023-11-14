@@ -4,11 +4,11 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.archetype</groupId>
-  <artifactId>maven_archetype</artifactId>
+  <groupId>br.ucb.poo</groupId>
+  <artifactId>exemplo_sqlite</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>maven_archetype</name>
+  <name>exemplo_sqlite</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -20,12 +20,38 @@
 
   <dependencies>
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.11</version>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <version>5.9.1</version>
       <scope>test</scope>
     </dependency>
+
+    <dependency>
+      <groupId>org.xerial</groupId>
+      <artifactId>sqlite-jdbc</artifactId>
+      <version>3.25.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-core</artifactId>
+      <version>5.6.1.Final</version>
+    </dependency>
+
+    <dependency>
+    <groupId>javax.persistence</groupId>
+    <artifactId>javax.persistence-api</artifactId>
+    <version>2.2</version> 
+</dependency>
+
+    <dependency>
+        <groupId>com.github.gwenn</groupId>
+        <artifactId>sqlite-dialect</artifactId>
+        <version>0.1.1</version>
+    </dependency>
   </dependencies>
+  
+  
 
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
