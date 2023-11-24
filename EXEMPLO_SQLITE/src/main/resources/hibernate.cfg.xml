@@ -19,7 +19,10 @@
         <property name="hibernate.hbm2ddl.auto">update</property>
 
         <!-- Mapeamento das Entidades -->
-        <mapping class="br.ucb.poo.model.Pessoa"/>
+        <mapping class="br.ucb.poo.model.Usuario"/>
+        <mapping class="br.ucb.poo.model.Cachorro"/> <!-- Adicione esta linha -->
+        <mapping class="br.ucb.poo.model.Gato"/>
+        <mapping class="br.ucb.poo.model.Passaro"/>
 
     </session-factory>
 </hibernate-configuration>

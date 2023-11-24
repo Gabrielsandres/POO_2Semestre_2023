@@ -1,43 +1,43 @@
 package br.ucb.poo.model;
 
-//import java.lang.annotation.Inherited;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-
 @Entity
-public class Pessoa {
+public class Usuario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     private String nome;
     private String email;
+    private String senha;
 
-    public Pessoa() {
+    public Usuario() {
 
     }
 
-    public Pessoa(Long id, String nome, String email) {
+    public Usuario(Integer id, String nome, String email, String senha) {
         this.id = id;
         this.nome = nome;
         this.email = email;
+        this.senha = senha;
     }
 
-    public Pessoa(String nome, String email) {
+    public Usuario(String nome, String email, String senha) {
         this.nome = nome;
         this.email = email;
+        this.senha = senha;
     }
 
-    public Long getId() {
+    public Integer getId() {
         return this.id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -57,13 +57,21 @@ public class Pessoa {
         this.email = email;
     }
 
+    public String getSenha() {
+        return this.senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
     @Override
     public String toString() {
         return "{" +
-                " Id='" + getId() + "'" +
-                ", nome='" + getNome() + "'" +
-                ", email='" + getEmail() + "'" +
-                "}";
+            " id='" + getId() + "'" +
+            ", nome='" + getNome() + "'" +
+            ", email='" + getEmail() + "'" +
+            ", senha='" + getSenha() + "'" +
+            "}";
     }
-
 }

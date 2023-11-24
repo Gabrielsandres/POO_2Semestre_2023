@@ -4,10 +4,9 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
+import br.ucb.poo.model.Usuario;
 
-import br.ucb.poo.model.Pessoa;
-
-public class PessoaDAO {
+public class UsuarioDAO implements AutoCloseable {
     
     private static final SessionFactory sessionFactory;
 
@@ -22,16 +21,16 @@ public class PessoaDAO {
     }
 
     public void close() {
-        sessionFactory.close();
+        // Mantenha a SessionFactory aberta aqui
     }
 
-    public void salvarPessoa(Pessoa pessoa){
+    public void salvarUsuario(Usuario usuario){
         Transaction transaction = null;
 
         try { 
             Session session = sessionFactory.openSession() ;
             transaction = session.beginTransaction();
-            session.save(pessoa);
+            session.save(usuario);
             transaction.commit();
         } catch (Exception e) {
             if (transaction != null) {
@@ -41,22 +40,24 @@ public class PessoaDAO {
         }
     }
     
-    public Pessoa getPessoaById(Long id) {
-        Pessoa p = null;
-        try { 
-            Session session = sessionFactory.openSession();
-            p = session.get(Pessoa.class, id);
-        }catch (Exception e){
+    public Usuario getUsuarioById(Integer id) {
+        Usuario usuario = null;
+        try (Session session = sessionFactory.openSession()) {
+            Transaction transaction = session.beginTransaction();
+            usuario = session.get(Usuario.class, id);
+            transaction.commit();
+        } catch (Exception e) {
+            // Tratar exceções de forma mais controlada, lançar uma exceção personalizada ou logar o erro
             e.printStackTrace();
         }
-        return p;
+        return usuario;
     }
     
-    public void atualizarPessoa(Pessoa pessoa) {
+    public void atualizarUsuario(Usuario usuario) {
         Transaction transaction = null;
         try (Session session = sessionFactory.openSession()) {
             transaction = session.beginTransaction();
-            session.update(pessoa);
+            session.update(usuario);
             transaction.commit();
         } catch (Exception e) {
             if (transaction != null) {
@@ -66,12 +67,12 @@ public class PessoaDAO {
         }
     }
     
-    public void deletarPessoa(Pessoa pessoa) {
+    public void deletarUsuario(Usuario usuario) {
         Transaction transaction = null;
         try {
             Session session = sessionFactory.openSession(); 
             transaction = session.beginTransaction();
-            session.delete(pessoa);
+            session.delete(usuario);
             transaction.commit();
         } catch (Exception e) {
             if (transaction != null) {
@@ -80,8 +81,8 @@ public class PessoaDAO {
             e.printStackTrace();
         } 
     }
-    
 }
+
 
 
 
